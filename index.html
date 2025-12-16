@@ -10,18 +10,37 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark lol-navbar">
-  <div class="container-fluid px-4">
-    <a class="navbar-brand fw-bold text-warning" href="#" id="nav-home">LoL Gallery</a>
-    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-      <li class="nav-item"><a class="nav-link" href="#" id="nav-home-2">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="#" id="nav-champions">Champions</a></li>
-      <li class="nav-item"><a class="nav-link" href="#" id="nav-items">Items</a></li>
-    </ul>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-opacity-75">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#" onclick="showHome()">LOL GALLERY</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-3">
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="showHome()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="loadChampions()">Champions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="loadItems()">Items</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
+<!-- HERO HOME -->
 <section id="home" class="hero-section">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blt71c89b6b6d8c0db6/5f8f41aab8c8a87a1c7b4c5e/LOL_AnimatedHero.mp4" type="video/mp4">
+  </video>
+
   <div class="hero-overlay"></div>
 
   <div class="hero-content text-center">
@@ -30,16 +49,16 @@
       A 5v5 MOBA where teams battle to destroy the enemy Nexus
     </p>
 
-    <div class="hero-buttons">
-      <button class="btn btn-gold me-3" id="btn-champions">Browse Champions</button>
-      <button class="btn btn-outline-gold" id="btn-items">Browse Items</button>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <button class="btn btn-gold" onclick="loadChampions()">Browse Champions</button>
+      <button class="btn btn-outline-gold" onclick="loadItems()">Browse Items</button>
     </div>
   </div>
 </section>
 
-<main class="container content d-none" id="mainContent">
-
-  <h2 class="text-center mb-4 glow-title" id="pageTitle"></h2>
+<!-- CONTENT -->
+<div class="container my-5 d-none" id="content">
+  <h2 class="text-center mb-4" id="sectionTitle"></h2>
 
   <div class="row mb-4">
     <div class="col-md-6 mx-auto">
@@ -52,10 +71,11 @@
   <nav class="mt-5">
     <ul class="pagination justify-content-center" id="pagination"></ul>
   </nav>
-</main>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
+
 
