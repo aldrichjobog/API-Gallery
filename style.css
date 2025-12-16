@@ -1,19 +1,54 @@
 body {
-  background: radial-gradient(circle at top, #0b1c2d, #050a12);
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(5, 10, 18, 0.92), rgba(5, 10, 18, 0.92)),
+    url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3b32d2c8b5b6f5b5/61d4f0f83c5f1c6b7d9c6f9f/LOL_Season_2024_Key_Art.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #e5e7eb;
   font-family: "Beaufort for LOL", "Times New Roman", serif;
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(200,155,60,0.15), transparent 55%),
+    rgba(5,10,18,0.85);
+  z-index: -1;
 }
 
 h1 {
   color: #c89b3c;
   letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(200, 155, 60, 0.4);
+  text-shadow:
+    0 0 12px rgba(200, 155, 60, 0.5),
+    0 0 25px rgba(200, 155, 60, 0.25);
+}
+
+.glow-title {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(200, 155, 60, 0.4),
+      0 0 20px rgba(200, 155, 60, 0.25);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(200, 155, 60, 0.8),
+      0 0 40px rgba(200, 155, 60, 0.4);
+  }
 }
 
 #searchInput {
-  background-color: #091428;
+  background-color: rgba(9, 20, 40, 0.85);
   border: 1px solid #c89b3c;
   color: #f0e6d2;
+  backdrop-filter: blur(6px);
 }
 
 #searchInput::placeholder {
@@ -29,8 +64,10 @@ h1 {
 }
 
 .card:hover {
-  transform: translateY(-6px) scale(1.04);
-  box-shadow: 0 0 25px rgba(200, 155, 60, 0.4);
+  transform: translateY(-6px) scale(1.05);
+  box-shadow:
+    0 0 25px rgba(200, 155, 60, 0.5),
+    inset 0 0 15px rgba(200, 155, 60, 0.15);
 }
 
 .card img {
@@ -54,7 +91,7 @@ h1 {
 }
 
 .pagination .page-link {
-  background-color: #091428;
+  background-color: rgba(9, 20, 40, 0.9);
   border: 1px solid #c89b3c;
   color: #f0e6d2;
 }
@@ -69,3 +106,4 @@ h1 {
   border-color: #c89b3c;
   color: #091428;
 }
+
