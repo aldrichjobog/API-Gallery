@@ -1,4 +1,3 @@
-/* GLOBAL */
 body {
   background: #050a12;
   color: #f5f7fa; /* brighter base text */
@@ -6,7 +5,6 @@ body {
   letter-spacing: 0.4px;
 }
 
-/* NAVBAR */
 .lol-navbar {
   background: rgba(0,0,0,0.9);
   border-bottom: 1px solid #c89b3c;
@@ -25,7 +23,6 @@ body {
   text-shadow: 0 0 12px rgba(200,155,60,.8);
 }
 
-/* HERO */
 .hero-section {
   height: 100vh;
   background:
@@ -44,7 +41,6 @@ body {
   text-align: center;
 }
 
-/* HERO TITLE */
 .hero-title {
   font-size: 4.2rem;
   color: #f2d98d;
@@ -55,7 +51,6 @@ body {
     0 0 30px rgba(200,155,60,.6);
 }
 
-/* HERO SUBTITLE */
 .hero-subtitle {
   color: #f5f3ee;
   font-size: 1.1rem;
@@ -64,7 +59,6 @@ body {
   text-shadow: 0 0 10px rgba(0,0,0,.9);
 }
 
-/* BUTTONS */
 .btn-gold {
   background: linear-gradient(180deg, #e6c97a, #c89b3c);
   color: #091428;
@@ -95,12 +89,10 @@ body {
   box-shadow: 0 0 25px rgba(200,155,60,.9);
 }
 
-/* CONTENT */
 .content {
   padding-top: 120px;
 }
 
-/* SEARCH INPUT */
 #searchInput {
   background: rgba(9,20,40,.9);
   border: 1px solid #c89b3c;
@@ -113,7 +105,6 @@ body {
   color: #c9c6be;
 }
 
-/* CARDS */
 .card {
   background: linear-gradient(180deg, #0b1c2d, #091428);
   border: 1px solid rgba(200,155,60,.4);
@@ -135,7 +126,6 @@ body {
   padding: 12px;
 }
 
-/* CARD TITLE */
 .card-title,
 .card h6 {
   text-align: center;
@@ -145,7 +135,6 @@ body {
   text-shadow: 0 0 6px rgba(240,230,210,.6);
 }
 
-/* PAGINATION */
 .pagination .page-link {
   background: rgba(9,20,40,.95);
   border: 1px solid #c89b3c;
