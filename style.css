@@ -1,32 +1,76 @@
 body {
-  background-color: #0f172a;
-  color: white;
-  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b1c2d, #050a12);
+  color: #e5e7eb;
+  font-family: "Beaufort for LOL", "Times New Roman", serif;
+}
+
+h1 {
+  color: #c89b3c;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(200, 155, 60, 0.4);
+}
+
+#searchInput {
+  background-color: #091428;
+  border: 1px solid #c89b3c;
+  color: #f0e6d2;
+}
+
+#searchInput::placeholder {
+  color: #a09b8c;
 }
 
 .card {
-  background-color: #1e293b;
-  border: none;
-  border-radius: 15px;
+  background: linear-gradient(180deg, #0b1c2d, #091428);
+  border: 1px solid rgba(200, 155, 60, 0.35);
+  border-radius: 18px;
   overflow: hidden;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 0 25px rgba(200, 155, 60, 0.4);
 }
 
 .card img {
   height: 260px;
   object-fit: contain;
-  background-color: #000;
+  background: radial-gradient(circle, #091428, #000);
+  padding: 12px;
+}
+
+.card-body {
+  background-color: #091428;
 }
 
 .card-title {
-  font-size: 1rem;
+  font-size: 1.05rem;
   text-align: center;
-  margin-top: 10px;
+  color: #f0e6d2;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 6px rgba(240, 230, 210, 0.4);
+  margin: 0;
 }
+
+.pagination .page-link {
+  background-color: #091428;
+  border: 1px solid #c89b3c;
+  color: #f0e6d2;
+}
+
+.pagination .page-link:hover {
+  background-color: #c89b3c;
+  color: #091428;
+}
+
+.pagination .active .page-link {
+  background-color: #c89b3c;
+  border-color: #c89b3c;
+  color: #091428;
+}
+
+
 
 
 
