@@ -1,73 +1,93 @@
 body {
-  min-height: 100vh;
-  background:
-    linear-gradient(rgba(5, 10, 18, 0.92), rgba(5, 10, 18, 0.92)),
-    url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3b32d2c8b5b6f5b5/61d4f0f83c5f1c6b7d9c6f9f/LOL_Season_2024_Key_Art.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #050a12;
   color: #e5e7eb;
   font-family: "Beaufort for LOL", "Times New Roman", serif;
 }
 
-.bg-overlay {
-  position: fixed;
-  inset: 0;
+/* NAVBAR */
+.lol-navbar {
+  background: rgba(0,0,0,0.85);
+  border-bottom: 1px solid #c89b3c;
+}
+
+.nav-link {
+  color: #f0e6d2 !important;
+  margin-left: 20px;
+}
+
+.nav-link:hover {
+  color: #c89b3c !important;
+}
+
+/* HERO */
+.hero-section {
+  height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(200,155,60,0.15), transparent 55%),
-    rgba(5,10,18,0.85);
-  z-index: -1;
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.85)),
+    url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3b32d2c8b5b6f5b5/61d4f0f83c5f1c6b7d9c6f9f/LOL_Season_2024_Key_Art.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-h1 {
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-title {
+  font-size: 4rem;
   color: #c89b3c;
-  letter-spacing: 1px;
-  text-shadow:
-    0 0 12px rgba(200, 155, 60, 0.5),
-    0 0 25px rgba(200, 155, 60, 0.25);
+  text-shadow: 0 0 30px rgba(200,155,60,.7);
 }
 
-.glow-title {
-  animation: glowPulse 3s ease-in-out infinite;
-}
-
-@keyframes glowPulse {
-  0%, 100% {
-    text-shadow:
-      0 0 10px rgba(200, 155, 60, 0.4),
-      0 0 20px rgba(200, 155, 60, 0.25);
-  }
-  50% {
-    text-shadow:
-      0 0 20px rgba(200, 155, 60, 0.8),
-      0 0 40px rgba(200, 155, 60, 0.4);
-  }
-}
-
-#searchInput {
-  background-color: rgba(9, 20, 40, 0.85);
-  border: 1px solid #c89b3c;
+.hero-subtitle {
   color: #f0e6d2;
-  backdrop-filter: blur(6px);
+  letter-spacing: 1px;
+  margin-bottom: 30px;
 }
 
-#searchInput::placeholder {
-  color: #a09b8c;
+/* BUTTONS */
+.btn-gold {
+  background: #c89b3c;
+  color: #091428;
+  padding: 14px 28px;
+  border: none;
 }
 
+.btn-gold:hover {
+  background: #e6c97a;
+}
+
+.btn-outline-gold {
+  border: 1px solid #c89b3c;
+  color: #c89b3c;
+  padding: 14px 28px;
+}
+
+.btn-outline-gold:hover {
+  background: #c89b3c;
+  color: #091428;
+}
+
+/* CONTENT */
+.content {
+  padding-top: 120px;
+}
+
+/* CARDS */
 .card {
   background: linear-gradient(180deg, #0b1c2d, #091428);
-  border: 1px solid rgba(200, 155, 60, 0.35);
+  border: 1px solid rgba(200,155,60,.35);
   border-radius: 18px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform .3s, box-shadow .3s;
 }
 
 .card:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow:
-    0 0 25px rgba(200, 155, 60, 0.5),
-    inset 0 0 15px rgba(200, 155, 60, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(200,155,60,.5);
 }
 
 .card img {
@@ -77,33 +97,21 @@ h1 {
   padding: 12px;
 }
 
-.card-body {
-  background-color: #091428;
-}
-
 .card-title {
-  font-size: 1.05rem;
   text-align: center;
   color: #f0e6d2;
-  letter-spacing: 0.5px;
-  text-shadow: 0 0 6px rgba(240, 230, 210, 0.4);
-  margin: 0;
 }
 
+/* PAGINATION */
 .pagination .page-link {
-  background-color: rgba(9, 20, 40, 0.9);
+  background: rgba(9,20,40,.9);
   border: 1px solid #c89b3c;
   color: #f0e6d2;
 }
 
-.pagination .page-link:hover {
-  background-color: #c89b3c;
+.pagination .active .page-link {
+  background: #c89b3c;
   color: #091428;
 }
 
-.pagination .active .page-link {
-  background-color: #c89b3c;
-  border-color: #c89b3c;
-  color: #091428;
-}
 

@@ -10,40 +10,52 @@
 </head>
 <body>
 
-  <!-- Background Overlay -->
-  <div class="bg-overlay"></div>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark lol-navbar">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold text-warning" href="#" id="nav-home">LoL Gallery</a>
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item"><a class="nav-link" href="#" id="nav-home-2">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" id="nav-champions">Champions</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" id="nav-items">Items</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <div class="container position-relative">
-    <h1 class="text-center my-4 glow-title">
-      ⚔️ League of Legends Champions
-    </h1>
+<section id="home" class="hero-section">
+  <div class="hero-overlay"></div>
 
-    <div class="row mb-4">
-      <div class="col-md-6 mx-auto">
-        <input
-          type="text"
-          id="searchInput"
-          class="form-control text-center"
-          placeholder="Search champion..."
-        >
-      </div>
+  <div class="hero-content text-center">
+    <h1 class="hero-title">LEAGUE OF LEGENDS</h1>
+    <p class="hero-subtitle">
+      A 5v5 MOBA where teams battle to destroy the enemy Nexus
+    </p>
+
+    <div class="hero-buttons">
+      <button class="btn btn-gold me-3" id="btn-champions">Browse Champions</button>
+      <button class="btn btn-outline-gold" id="btn-items">Browse Items</button>
     </div>
+  </div>
+</section>
 
-    <div class="row g-4" id="gallery"></div>
+<main class="container content d-none" id="mainContent">
 
-    <nav class="mt-5">
-      <ul class="pagination justify-content-center" id="pagination"></ul>
-    </nav>
+  <h2 class="text-center mb-4 glow-title" id="pageTitle"></h2>
+
+  <div class="row mb-4">
+    <div class="col-md-6 mx-auto">
+      <input type="text" id="searchInput" class="form-control text-center" placeholder="Search...">
+    </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <div class="row g-4" id="gallery"></div>
+
+  <nav class="mt-5">
+    <ul class="pagination justify-content-center" id="pagination"></ul>
+  </nav>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
 
